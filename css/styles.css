@@ -30,11 +30,6 @@ body {
   width: auto;
   letter-spacing: 0.03em;
 }
-header {
-  max-width: auto;
-  margin: 0 auto;
-  border-bottom: 1px solid var(--border-header);
-}
 
 :root {
   --brand-color-blue: #2196f3;
@@ -49,6 +44,8 @@ header {
   --button-shadow-hover-first: #0000001a;
   --button-shadow-hover-second: #00000014;
   --grid-border: #eee;
+  --overlay: #2f303a66;
+  --icon-color: #afb1b8;
 }
 
 .web-color {
@@ -125,8 +122,21 @@ button {
 .transparent-text:focus {
   color: var(--brand-color-blue);
 }
-.background-dark {
+
+.background-dark-footer {
   background-color: var(--background-dark);
+}
+
+.background-dark {
+  /* background-color: var(--background-dark); */
+  background-image: linear-gradient(var(--overlay), var(--overlay)),
+    url(/images/people-in-office.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+  margin: 0 auto;
+  max-width: 1600px;
+  background-color: rgba(47, 48, 58, 0.4);
 }
 .background-light {
   background-color: var(--background-light);
@@ -161,6 +171,9 @@ h3 {
 h4 {
   font-weight: 500;
   padding: 30px 0 10px 0;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
 }
 
 .test li {
@@ -224,6 +237,8 @@ header {
   align-content: baseline;
   display: flex;
   align-items: center;
+  color: var(--brand-color-grey);
+  gap: 10px;
 }
 
 .agencja-pad {
@@ -254,10 +269,19 @@ header {
   padding-right: 50px;
   list-style-type: none;
   justify-content: flex-end;
-}
-.tel-pad {
-  list-style-type: none;
-  justify-content: flex-end;
+  color: var(--brand-color-grey);
+  /* }
+phone:hover,
+.phone:focus {
+  color: var(--brand-color-blue);
+} */
+  .tel-pad {
+    list-style-type: none;
+    justify-content: flex-end;
+  }
+  /* .tel-pad:hover, */
+  /* .tel-pad:focus { */
+  /* color: var(--brand-color-blue); */
 }
 .contact-navi:hover,
 .contact-navi:focus {
@@ -266,12 +290,15 @@ header {
 
 .section {
   padding: 94px 0 94px 0;
+  /* max-width: 1170px; */
+  display: flex;
 }
 
 .lorem-list {
   display: flex;
   padding-bottom: 94px;
   justify-content: space-between;
+  row-gap: 10px;
 }
 
 .lorem-list p {
@@ -295,13 +322,15 @@ ul[class='img-display'] > li {
 }
 
 .style-position {
-  padding-bottom: 30px;
+  padding-bottom: 16px;
 }
 
 .img-shadow {
   box-shadow: 0px 1px 3px var(--img-shadow-first),
     0px 1px 1px var(--img-shadow-second), 0px 2px 1px var(--img-shadow-third);
   border-radius: 0px 0px 4px 4px;
+  width: 270px;
+  height: 428px;
 }
 
 .buttons-style {
@@ -340,4 +369,85 @@ ul[class='img-display'] > li {
 
 .img-grid img {
   display: block;
+}
+.index-icons {
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.clients-section {
+  margin: 94px 215px;
+}
+.client-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.client-item {
+  margin-right: 30px;
+}
+.client-item:last-child {
+  margin-right: 0px;
+}
+
+.client-icon {
+  width: 50%;
+  height: 50%;
+  fill: var(--icon-color);
+}
+.client-icon:hover {
+  fill: var(--brand-color-blue);
+}
+.client-link {
+  border-radius: 4px;
+  border-color: var(--icon-fill);
+  border: 1px solid currentColor;
+  color: var(--icon-fill);
+  fill: currentColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+}
+.client-link:hover,
+.client-link:focus {
+  border-color: var(--brand-color-blue-blue);
+  fill: var(--brand-color-blue);
+}
+.phone {
+  fill: var(--icon-color);
+}
+.phone:hover,
+.phone:focus {
+  fill: var(--brand-color-blue);
+}
+.envelop {
+  fill: var(--icon-color);
+}
+.envelop:hover {
+  fill: var(--brand-color-blue);
+}
+.social-links-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  position: relative;
+  width: 206px;
+  height: 44px;
+  padding: 16px 32px 30px;
+  margin: auto;
+}
+
+.social-link {
+  fill: var(--icon-color);
+}
+.social-link:hover {
+  fill: var(--brand-color-blue);
 }
