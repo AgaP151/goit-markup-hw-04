@@ -130,7 +130,7 @@ button {
 .background-dark {
   /* background-color: var(--background-dark); */
   background-image: linear-gradient(var(--overlay), var(--overlay)),
-    url(images/people-in-office.jpg);
+    url(../images/people-in-office.jpg);
   background-position: center;
   background-size: cover;
   height: 600px;
